@@ -84,6 +84,7 @@ input{
   border: none;
   background-color: transparent;
   border-bottom: 1.5px solid #161616;
+  border-radius: 0;
 }
 
 .main-body{
@@ -323,7 +324,7 @@ input{
   transition: transform 0.3s ease;
 }
 
-.lucide{
+.lucide-chevron-right, .lucide-chevron-left{
   background-color: rgba(22, 22, 22, 0.5);
   border-radius: 0.2rem;
 }
