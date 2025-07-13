@@ -1,0 +1,237 @@
+*, *:before, *:after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  background-color: #F2F1ED;
+  scroll-behavior: smooth;
+  width: 100vw;
+}
+
+/* Custom rectangle cursor */
+.custom-rectangle-cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 0.2rem;
+  background-color: rgb(119, 17, 0); /* or any color */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s linear;
+}
+
+/* Cursor when hovering over links or buttons */
+.custom-rectangle-cursor.cursor-hover {
+  width: 40px;
+  height: 40px;
+}
+
+.navigation{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 1rem;
+  background-color: #F2F1ED;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+
+}
+
+.nav-link-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.link-container{
+  border-bottom-style: solid;
+  border-width: 0.2rem;
+  border-color: #161616;
+  color: #161616;
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+
+.nav-links{
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #161616;
+}
+
+.nav-links:hover{
+  color: #710;
+}
+
+.link-selected{
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #161616;
+}
+
+/* ------------------------------------------------------------ */
+/* Hide the checkbox */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* --- Burger Icon Styles --- */
+.burger label {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  z-index: 1001;
+  padding: 10px;
+  cursor: pointer;
+  display: inline-block;
+  background: transparent;
+}
+
+.burger{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+}
+
+.bar {
+  display: block;
+  background-color: #161616;
+  width: 30px;
+  height: 3px;
+  border-radius: 5px;
+  margin: 5px auto;
+  transition: background-color 0.4s ease-in, transform 0.4s ease-in,
+    width 0.4s ease-in;
+}
+
+.middle {
+  margin: 0 auto;
+}
+
+/* --- Burger → X Transformation --- */
+input[type="checkbox"]:checked ~ label .top {
+  -webkit-transform: translateY(0px) rotateZ(45deg);
+  -moz-transform: translateY(0px) rotateZ(45deg);
+  -ms-transform: translateY(0px) rotateZ(45deg);
+  -o-transform: translateY(0px) rotateZ(45deg);
+  transform: translateY(0px) rotateZ(45deg);
+}
+
+input[type="checkbox"]:checked ~ label .bottom {
+  -webkit-transform: translateY(-15px) rotateZ(-45deg);
+  -moz-transform: translateY(-15px) rotateZ(-45deg);
+  -ms-transform: translateY(-15px) rotateZ(-45deg);
+  -o-transform: translateY(-15px) rotateZ(-45deg);
+  transform: translateY(-15px) rotateZ(-45deg);
+}
+
+input[type="checkbox"]:checked ~ .aside-section.aside-right {
+  transform: translateX(0%);
+}
+
+
+input[type="checkbox"]:checked ~ label .middle {
+  width: 0;
+}
+
+input[type="checkbox"]:checked ~ label .bar {
+  background-color: #F2F1ED;
+}
+
+/* --- Mobile Nav Sidebar --- */
+.aside-section {
+  position: fixed;        /* cover entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;           /* make sure it's on top */
+}
+
+.aside-right {
+  width: 100%;
+  right: 0;
+  background-color: #161616;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+input[type="checkbox"]:checked ~ aside.aside-section.aside-right {
+  left: 0;
+}
+
+.aside-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 150px;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.aside-anchor {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: #F2F1ED;
+  display: block;       /* Ensure it's full-width clickable */
+  padding: 10px 20px;
+  border: none;         /* In case buttons or anchors have borders */
+}
+
+/* Hide desktop nav links on small screens */
+@media (max-width: 575px) {
+  .nav-link-container {
+    display: none;
+  }
+
+  label.burger {
+    display: flex;
+  }
+
+  aside.aside-section {
+    display: block;
+  }
+}
+
+@media (min-width: 576px) {
+  label.burger {
+    display: none;
+  }
+
+  aside.aside-section {
+    display: none;
+  }
+
+  .nav-link-container {
+    display: flex; /* or inline-flex or block, depending on your layout */
+  }
+}
+
+@media screen and (max-width: 344px){
+  .aside-anchor{
+    font-size: 2rem;
+  }
+
+  .aside-list{
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,694 @@
+/* Trigger  */
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  }
+
+@keyframes slide-top {
+  0% {
+            transform: translateY(100px);
+            opacity: 0;
+  }
+  100% {
+            transform: translateY(-100px);
+            opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translate3d(0, 50px, 0); }
+  to { opacity: 1; transform: none; } }
+.fadeInUp { animation-name: fadeInUp; }
+
+.fadeUp.in-view{
+  animation: fadeInUp 1s both;
+}
+
+h1{
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 700;
+  font-size: 6rem;
+  color: #F2F1ED;
+}
+
+h2{
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  padding: 5% 0;
+}
+
+h3{
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+h4{
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+h5{
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+span{
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.stack, .message-container label{
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+::placeholder{
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #787878;
+}
+
+input{
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #161616;
+  padding: 0.5rem;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1.5px solid #161616;
+}
+
+.main-body{
+  padding: 0 10%;
+}
+
+.main-content{
+  margin: auto;
+  margin-bottom: 30vh;
+  padding-bottom: 10%;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-desc-container{
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+  padding: 0 4rem;
+  align-items: center;
+  
+  animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s both;
+}
+
+.big-title{
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 700;
+  font-size: 12vw;
+  color: #F2F1ED;
+}
+
+.hero-desc{
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 200;
+  font-size: 2vw;
+  color: #F2F1ED;
+  transform: translateY(-80%);
+}
+
+.red-button{
+  font-family: 'Satoshi', sans-serif;
+  color: #F2F1ED;
+  background-color: #771100;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 0.1rem;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.red-button:hover{
+  transition: ease-in-out;
+  background-color: #161616;
+}
+
+.resto-img{
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+  border-radius: 0.2rem;
+}
+
+.about-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 10%;
+}
+
+.about-title{
+  flex: 1;
+}
+
+.about-desc-container{
+  flex: 1;
+}
+
+.resto-details-containers{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10%;
+  column-gap: 2rem;
+}
+
+.sec-img-container{
+  flex: 1;
+}
+
+.details-container{
+  flex: 1;
+}
+
+.details{
+  padding-bottom: 5%;
+}
+
+/* image ticker --------------------------------------------------- */
+.image-ticker-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 2rem;
+}
+
+.image-ticker {
+  display: flex;
+  width: fit-content;
+  animation: scroll-images 10s linear infinite;
+}
+
+.image-ticker img {
+  width: 20%; /* size of img */
+  height: auto;
+  margin-right: 1rem;
+  border-radius: 0.1rem;
+  object-fit: cover;
+}
+
+@keyframes scroll-images {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-105.5%);
+  }
+}
+/* -------------------------------------------------------------------------------- */
+
+.open-container{
+  display: flex;
+  flex-direction: row;
+  padding: 10%;
+}
+
+.hours-title{
+  flex: 1;
+}
+
+.days-hours-container{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.days ,
+.hours{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  row-gap: 1rem;
+}
+
+.hours{
+  text-align: right;
+}
+
+/* cartes & menus page css ---------------------------------------- */
+.menu-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+  padding-top: 5%;
+}
+
+.hero-title-container{
+  z-index: 1;
+  top: 20%;
+  
+  position: relative;
+  justify-self: center;
+  animation: fadeInUp 1s both;
+}
+
+.first-section {
+  position: relative;
+  padding-top: 5%;
+  overflow: hidden;
+  height: 50vh;
+}
+
+.day-price{
+  justify-self: center;
+  text-align: center;
+}
+
+.menu-du-jour-container{
+  background-color: rgba(22, 22, 22,0.05);
+  border-radius: 0.2rem;
+  padding: 0 5%;
+}
+
+.day-menu{
+  padding: 2% 0;
+}
+
+.standard-menu-container{
+  padding-bottom: 10%;
+}
+
+/* Gallery Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  padding-bottom: 10%;
+}
+
+.gallery-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Container stays fixed size */
+.img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Image zooms inside wrapper */
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.img-wrapper:hover img {
+  transform: scale(1.1); /* Zoom in */
+}
+
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  flex-direction: column;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay-img {
+  max-width: 90%;
+  max-height: 80%;
+  object-fit: contain;
+  border-radius: 0.2rem;
+}
+
+.close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.overlay-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 3rem;
+  padding: 0 2rem;
+  user-select: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: row;
+  padding: 5% 10%;
+
+  animation: fadeInUp 1s both;
+}
+
+.big-form-container{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+
+  border-right: 1.5px solid #161616;
+  align-items: center;
+}
+
+.contact-form{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  column-gap: 2%;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+.left-side,
+.right-side{
+  flex: 1;
+}
+
+.stack{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.5rem;
+}
+
+.message-container{
+  display: flex;
+  flex-direction: column;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+textarea{
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+
+  height: 100px;
+  resize: none;
+  padding: 0.5rem;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1.5px solid #161616;
+}
+
+.call-container{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+.icon-tele{
+  display: flex;
+  flex-direction: row;
+  column-gap: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+.call-link{
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #161616;
+  text-decoration: none;
+}
+
+.call-link:hover{
+  color: #771100;
+}
+
+/* Make sure the container has a specific aspect ratio */
+.map-embed {
+  position: relative;
+  width: 100%;  /* Make the container responsive */
+  max-width: 80%;
+  margin: 0 auto;
+  padding-bottom: 30%;  /* This creates the 4:3 aspect ratio (450 / 600 = 0.75 or 75%) */
+  height: 0;
+  overflow: hidden;
+}
+
+/* Style for the iframe inside the container */
+.map-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+/* ----------------------------------------------------------------- */
+@media screen and (max-width: 1156px){
+  h2{
+    font-size: 2.5rem;
+  }
+
+  .days{
+    flex: none;
+  }
+
+  .days-hours-container{
+    justify-content: space-between;
+  }
+
+  .first-section{
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 788px){
+  h2{
+    font-size: 2rem;
+  }
+
+  span{
+    font-size: 1rem;
+  }
+
+  .first-section{
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 765px){
+  .form-container{
+    flex-direction: column;
+  }
+
+  .big-form-container{
+    border-right-style: none;
+    padding-bottom: 5%;
+  }
+
+  .call-container{
+    padding-top: 5%;
+  }
+}
+
+@media screen and (max-width: 540px){
+  .hero-desc-container{
+    padding: 0 2rem;
+  }
+
+  .big-title{
+    font-size: 4.5rem;
+  }
+
+  .hero-desc{
+    font-size: 1.5rem;
+    transform: translateY(-20%);
+  }
+
+  .red-button{
+    font-size: 1rem;
+  }
+
+  .about-container{
+    flex-direction: column;
+  }
+
+  .resto-img{
+    padding: 2rem 10%;
+  }
+
+  .resto-img img{
+    width: 100%;
+  }
+
+  .resto-details-containers{
+    flex-direction: column;
+  }
+
+  .image-ticker-wrapper{
+    padding: 0;
+  }
+
+  .open-container{
+    flex-direction: column;
+  }
+
+  .menu-img{
+    height: 40vh;
+  }
+
+  h1{
+    font-size: 4rem;
+  }
+
+  .first-section{
+    padding-top: 15%;
+  }
+
+  .big-form-container{
+    align-items: stretch;
+  }
+
+  .contact-form{
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 491px){
+  .form-container{
+    padding: 5% 2%;
+  }
+
+  label, input, ::placeholder{
+    font-size: 0.8rem;
+  }
+
+  .message-container label{
+    font-size: 0.8rem;
+  }
+
+  .message-container{
+    padding-right: 0;
+  }
+
+  input, textarea{
+    border-bottom: 1px solid #161616;
+  }
+
+  .hero-desc{
+    transform: none;
+  }
+
+  .big-title, .hero-desc{
+    padding-bottom: 5%;
+  }
+
+  .resto-details-container, .open-container{
+    padding: 2% 10%;
+  }
+
+  .main-content{
+    margin-bottom: 20vh;
+  }
+
+  .first-section {
+    padding-top: 25%;
+  } 
+
+  h1{
+    font-size: 3rem;
+  }
+
+  h2{
+    font-size: 1.5rem;
+  }
+
+  h3{
+    font-size: 1.2rem;
+  }
+
+  h4{
+    font-size: 1rem;
+  }
+
+  h5{
+    font-size: 0.8rem;
+  }
+
+  span{
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 344px){
+  h1{
+    font-size: 2.5rem;
+  }
+
+  .first-section{
+    height: 20vh;
+  }
+
+  .menu-img{
+    height: 20vh;
+  }
+}
