@@ -633,11 +633,11 @@ textarea{
   }
 
   label, input, ::placeholder{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .message-container label{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .message-container{
@@ -685,11 +685,11 @@ textarea{
   }
 
   h5{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   span{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
