@@ -62,7 +62,7 @@
 
     <main class="main-content">
       <div class="form-container">
-        <form class="big-form-container" action="https://api.web3forms.com/submit" method="POST">
+        <form id="myform" class="big-form-container" action="https://api.web3forms.com/submit" method="POST">
           <div class="contact-form">
             <div class="left-side">
               <div class="stack">
@@ -91,7 +91,7 @@
             <label for="message">Message</label>
             <textarea name="message" placeholder="Votre message" id="message" required></textarea>
           </div>
-          <input type="submit" value="Envoyer" class="red-button">
+          <input type="submit" value="Envoyer" class="red-button" onclick="myFunction()">
         </form>
         <div class="call-container">
           <h3>Appelez-nous</h3>
@@ -145,5 +145,12 @@
 
     <script src="script.js"></script>
     <script src="animation.js"></script>
+    <script>
+      window.addEventListener("pageshow", function (event) {
+        if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+          document.getElementById("myform").reset();
+        }
+      });
+    </script>
   </body>
 </html>
