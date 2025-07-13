@@ -458,6 +458,7 @@ textarea{
   border: none;
   background-color: transparent;
   border-bottom: 1.5px solid #161616;
+  border-radius: 0;
 }
 
 .call-container{
