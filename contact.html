@@ -62,22 +62,23 @@
 
     <main class="main-content">
       <div class="form-container">
-        <form class="big-form-container">
+        <form class="big-form-container" action="https://api.web3forms.com/submit" method="POST">
           <div class="contact-form">
             <div class="left-side">
               <div class="stack">
+                <input type="hidden" name="access_key" value="89e57490-e160-41fa-aab4-2d7bd13080e7">
                 <label for="fname">Prénom</label>
-                <input type="text" name="fname" placeholder="Entrez votre prénom" id="fname">
+                <input type="text" name="fname" placeholder="Entrez votre prénom" id="fname" required>
               </div>
               <div class="stack">
                 <label for="email">Email</label>
-                <input type="text" name="email" placeholder="example@email.com" id="email">
+                <input type="text" name="email" placeholder="example@email.com" id="email" required>
               </div>
             </div>
             <div class="right-side">
               <div class="stack">
                 <label for="lname">Nom</label>
-                <input type="text" name="lname" placeholder="Entrez votre nom" id="lname">
+                <input type="text" name="lname" placeholder="Entrez votre nom" id="lname" required>
               </div>
               <div class="stack">
                 <label for="tele">Télephone</label>
@@ -88,7 +89,7 @@
 
           <div class="message-container">
             <label for="message">Message</label>
-            <textarea name="message" placeholder="Votre message" id="message"></textarea>
+            <textarea name="message" placeholder="Votre message" id="message" required></textarea>
           </div>
           <input type="submit" value="Envoyer" class="red-button">
         </form>
