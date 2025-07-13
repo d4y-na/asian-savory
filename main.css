@@ -271,9 +271,10 @@ input{
 .hero-title-container{
   z-index: 1;
   top: 20%;
-  
+
+  display: flex;
+  justify-content: center;
   position: relative;
-  justify-self: center;
   animation: fadeInUp 1s both;
 }
 
