@@ -625,6 +625,10 @@ textarea{
   .contact-form{
     padding-right: 0;
   }
+
+    .fadeUp.in-view{
+    animation: none;
+  }
 }
 
 @media screen and (max-width: 491px){
@@ -691,6 +695,10 @@ textarea{
   span{
     font-size: 0.9rem;
   }
+
+    .fadeUp.in-view{
+    animation: none;
+  }
 }
 
 @media screen and (max-width: 344px){
@@ -704,5 +712,9 @@ textarea{
 
   .menu-img{
     height: 20vh;
+  }
+
+    .fadeUp.in-view{
+    animation: none;
   }
 }
